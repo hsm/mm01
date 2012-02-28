@@ -1,0 +1,279 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7703,        270]
+NotebookOptionsPosition[      6073,        211]
+NotebookOutlinePosition[      6865,        239]
+CellTagsIndexPosition[      6822,        236]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Matematisk Modellering 1 formelsamling", "Title",
+ CellChangeTimes->{{3.53941911047313*^9, 3.539419124342823*^9}, 
+   3.539420110550037*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Diverse Mathematica tricks", "Section",
+ CellChangeTimes->{{3.5394210248412046`*^9, 3.539421059019112*^9}}],
+
+Cell["\<\
+For at fjerne allerede definerede funktioner, variabler og lignende, kan man \
+benytte\
+\>", "Text",
+ CellChangeTimes->{{3.539421159189242*^9, 3.539421209356258*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Remove", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input"],
+
+Cell[TextData[{
+ "Alternativt kan man evaluere denne notebook igen for at slette alt og indl\
+\[AE]se formelsamlingen p\[ARing]ny.\n\nMan kan lave en slags scopes ved at \
+benytte contexts i ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ". Hvis man begynder en sektion med"
+}], "Text",
+ CellChangeTimes->{{3.539421216004367*^9, 3.539421310398946*^9}, {
+  3.539422262961896*^9, 3.5394222962230597`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Begin", "[", "\"\<Global`Example`\>\"", "]"}]], "Input",
+ Evaluatable->False,
+ CellChangeTimes->{3.539422362986889*^9}],
+
+Cell["og afslutter den med", "Text",
+ CellChangeTimes->{{3.539422332835046*^9, 3.539422342249148*^9}, 
+   3.539422392817273*^9}],
+
+Cell[BoxData[
+ RowBox[{"End", "[", "]"}]], "Input",
+ Evaluatable->False,
+ CellChangeTimes->{{3.5394223448792057`*^9, 3.539422346792836*^9}}],
+
+Cell["\<\
+er de brugte funktioner og variable lokale for contexten. Hvis man senere \
+bruge det samme context navn vil der ikke v\[AE]re noget gemt fra sidste gang.\
+\>", "Text",
+ CellChangeTimes->{{3.539422415895626*^9, 3.539422516975515*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Fordelinger", "Section",
+ CellChangeTimes->{{3.5394191530013733`*^9, 3.539419154990858*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\[CapitalPhi] og ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CapitalPhi]", 
+    RowBox[{"-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (Normalfordeling)"
+}], "Subsubsection",
+ CellChangeTimes->{{3.5394192718587933`*^9, 3.5394192989638777`*^9}, {
+  3.539419361057826*^9, 3.539419365744081*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Phi", "[", "x_", "]"}], ":=", 
+   RowBox[{"CDF", "[", 
+    RowBox[{
+     RowBox[{"NormalDistribution", "[", 
+      RowBox[{"0", ",", "1"}], "]"}], ",", "x"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InversePhi", "[", "x_", "]"}], ":=", 
+   RowBox[{"InverseCDF", "[", 
+    RowBox[{
+     RowBox[{"NormalDistribution", "[", 
+      RowBox[{"0", ",", "1"}], "]"}], ",", "x"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.539419326121666*^9, 3.539419338102347*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CapitalChi]", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "- fordeling"
+}], "Subsubsection",
+ CellChangeTimes->{{3.53941967813556*^9, 3.539419724880825*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ChiSquare", "[", 
+    RowBox[{"f_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{"CDF", "[", 
+    RowBox[{
+     RowBox[{"ChiSquareDistribution", "[", "f", "]"}], ",", "x"}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InverseChiSquare", "[", 
+    RowBox[{"f_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{"InverseCDF", "[", 
+    RowBox[{
+     RowBox[{"ChiSquareDistribution", "[", "f", "]"}], ",", "x"}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ChiSquareSlash", "[", 
+    RowBox[{"f_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{"CDF", "[", 
+    RowBox[{
+     RowBox[{"ChiSquareDistribution", "[", "f", "]"}], ",", 
+     RowBox[{"f", "*", "x"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InverseChiSquareSlash", "[", 
+    RowBox[{"f_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"InverseCDF", "[", 
+     RowBox[{
+      RowBox[{"ChiSquareDistribution", "[", "f", "]"}], ",", "x"}], "]"}], 
+    "/", "f"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.539419761232613*^9, 3.53941976123479*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["t - fordeling", "Subsubsection",
+ CellChangeTimes->{{3.5394197675249434`*^9, 3.539419801528802*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"T", "[", 
+    RowBox[{"f_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{"CDF", "[", 
+    RowBox[{
+     RowBox[{"StudentTDistribution", "[", "f", "]"}], ",", "x"}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InverseT", "[", 
+    RowBox[{"f_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{"InverseCDF", "[", 
+    RowBox[{
+     RowBox[{"StudentTDistribution", "[", "f", "]"}], ",", "x"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.539419804135927*^9, 3.539419804138199*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["F - fordeling", "Subsubsection",
+ CellChangeTimes->{{3.5394198140530453`*^9, 3.539419828304845*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"F", "[", 
+    RowBox[{"f1_", ",", "f2_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{"CDF", "[", 
+    RowBox[{
+     RowBox[{"FRatioDistribution", "[", 
+      RowBox[{"f1", ",", "f2"}], "]"}], ",", "x"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InverseF", "[", 
+    RowBox[{"f1_", ",", "f2_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{"InverseCDF", "[", 
+    RowBox[{
+     RowBox[{"FRatioDistribution", "[", 
+      RowBox[{"f1", ",", "f2"}], "]"}], ",", "x"}], "]"}]}], ";"}]}], "Input",\
+
+ CellChangeTimes->{{3.5394198384931707`*^9, 3.539419838495109*^9}}]
+}, Closed]]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1463, 917},
+WindowMargins->{{51, Automatic}, {Automatic, 31}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData["Title"], FontSize -> 45], 
+   Cell[
+    StyleData["Section"], FontSize -> 36], 
+   Cell[
+    StyleData["Subsubsection"], FontSize -> 18], 
+   Cell[
+    StyleData["Text"], FontSize -> 16]}, Visible -> False, FrontEndVersion -> 
+  "8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, 2010)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 146, 2, 85, "Title"],
+Cell[CellGroupData[{
+Cell[750, 28, 113, 1, 83, "Section"],
+Cell[866, 31, 176, 4, 30, "Text"],
+Cell[1045, 37, 92, 2, 27, "Input"],
+Cell[1140, 41, 409, 9, 68, "Text"],
+Cell[1552, 52, 143, 3, 27, "Input",
+ Evaluatable->False],
+Cell[1698, 57, 128, 2, 30, "Text"],
+Cell[1829, 61, 140, 3, 27, "Input",
+ Evaluatable->False],
+Cell[1972, 66, 244, 4, 30, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2253, 75, 98, 1, 53, "Section"],
+Cell[CellGroupData[{
+Cell[2376, 80, 339, 10, 33, "Subsubsection"],
+Cell[2718, 92, 528, 15, 43, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3283, 112, 236, 7, 33, "Subsubsection"],
+Cell[3522, 121, 1077, 34, 73, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4636, 160, 106, 1, 30, "Subsubsection"],
+Cell[4745, 163, 532, 17, 43, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5314, 185, 106, 1, 30, "Subsubsection"],
+Cell[5423, 188, 610, 18, 43, "Input"]
+}, Closed]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
