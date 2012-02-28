@@ -191,6 +191,7 @@ Cell[BoxData[{
 WindowSize->{1463, 917},
 WindowMargins->{{51, Automatic}, {Automatic, 31}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
+TrackCellChangeTimes->False,
 FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
 2010)",
 StyleDefinitions->Notebook[{
