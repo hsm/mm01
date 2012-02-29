@@ -185,6 +185,189 @@ Cell[BoxData[{
  
  CellChangeTimes->{{3.5394198384931707`*^9, 3.539419838495109*^9}}]
 }, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Line\[AE]r regression", "Section"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<Global`Example`\>\"", "]"}], ";"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"data", " ", "=", " ", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"68", ",", "188.7"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"62", ",", " ", "184.2"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"49", ",", " ", "151.3"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"62", ",", " ", "182.4"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"34", ",", " ", "138.3"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"66", ",", " ", "181.8"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"45", ",", " ", "155.1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"60", ",", " ", "178.3"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"57", ",", " ", "179.4"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"57", ",", " ", "171.5"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"63", ",", " ", "177.9"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"56", ",", " ", "172.5"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"57", ",", " ", "169.3"}], "}"}]}], "\[IndentingNewLine]", 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nData", " ", "=", " ", 
+   RowBox[{"Length", "[", "data", "]"}]}], " ", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"xData", " ", "=", " ", 
+   RowBox[{"Extract", "[", 
+    RowBox[{
+     RowBox[{"Transpose", "[", "data", "]"}], ",", 
+     RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sxData", " ", "=", " ", 
+   RowBox[{"Total", "[", "xData", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tData", " ", "=", " ", 
+   RowBox[{"Extract", "[", 
+    RowBox[{
+     RowBox[{"Transpose", "[", "data", "]"}], ",", 
+     RowBox[{"{", "1", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"stData", " ", "=", " ", 
+   RowBox[{"Total", "[", "tData", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ussxData", " ", "=", " ", 
+   RowBox[{"Total", "[", 
+    RowBox[{"xData", " ", "//", " ", 
+     RowBox[{
+      RowBox[{"#", "^", "2"}], "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"usstData", " ", "=", " ", 
+   RowBox[{"Total", "[", 
+    RowBox[{"tData", " ", "//", " ", 
+     RowBox[{
+      RowBox[{"#", "^", "2"}], "&"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"spxtData", " ", "=", " ", 
+   RowBox[{"Total", "[", 
+    RowBox[{"xData", " ", "*", " ", "tData"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", "nData"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sx", " ", "=", " ", "sxData"}], ";", 
+  RowBox[{"st", " ", "=", " ", "stData"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ussx", " ", "=", " ", "ussxData"}], ";", " ", 
+  RowBox[{"usst", " ", "=", " ", "usstData"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"spxt", " ", "=", " ", "spxtData"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"NumberForm", "[", 
+  RowBox[{
+   RowBox[{"N", "[", 
+    RowBox[{"Grid", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\>\"", ",", "\"\<x\>\"", ",", "\"\<\>\"", ",", "\"\<t\>\""}], 
+         "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<n\>\"", ",", "\"\<\>\"", ",", "n", ",", " ", "\"\<\>\""}], 
+         "}"}], ",", " ", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<S\>\"", ",", " ", "sx", ",", " ", "\"\<\>\"", ",", " ", "st"}], 
+         "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<USS\>\"", ",", " ", "ussx", ",", " ", "\"\<\>\"", ",", " ", 
+          "usst"}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<SP\>\"", ",", " ", "\"\<\>\"", ",", " ", "spxt", ",", " ", 
+          "\"\<\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<SSD\>\"", ",", 
+          RowBox[{"ssdx", " ", "=", " ", 
+           RowBox[{"ussx", " ", "-", " ", 
+            RowBox[{
+             RowBox[{"sx", "^", "2"}], "/", "n"}]}]}], ",", "\"\<\>\"", ",", 
+          RowBox[{"ssdt", " ", "=", " ", 
+           RowBox[{"usst", " ", "-", " ", 
+            RowBox[{
+             RowBox[{"st", "^", "2"}], "/", "n"}]}]}]}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<SPD\>\"", ",", "\"\<\>\"", ",", 
+          RowBox[{"spdxt", " ", "=", " ", 
+           RowBox[{"spxt", " ", "-", " ", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"sx", "*", "st"}], ")"}], "/", "n"}]}]}], ",", 
+          "\"\<\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*OverscriptBox[\(\[Beta]\), \(^\)]\)\>\"", ",", "\"\<\>\"",
+           ",", 
+          RowBox[{"beta", " ", "=", " ", 
+           RowBox[{"spdxt", "/", "ssdt"}]}], ",", "\"\<\>\""}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*OverscriptBox[\(\[Alpha]\), \(^\)]\)\>\"", ",", 
+          "\"\<\>\"", ",", 
+          RowBox[{"alpha", " ", "=", " ", 
+           RowBox[{
+            RowBox[{"1", "/", "n"}], 
+            RowBox[{"(", 
+             RowBox[{"sx", " ", "-", " ", 
+              RowBox[{"beta", " ", "*", " ", "st"}]}], ")"}]}]}], ",", 
+          "\"\<\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SubscriptBox[\(SSD\), \(02\)]\)\>\"", ",", "\"\<\>\"", 
+          ",", 
+          RowBox[{"ssd02", " ", "=", " ", 
+           RowBox[{"ssdx", " ", "-", " ", 
+            RowBox[{
+             RowBox[{"spdxt", "^", "2"}], "/", "ssdt"}]}]}], ",", 
+          "\"\<\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<\!\(\*SuperscriptBox[SubscriptBox[\(s\), \(02\)], \(2\)]\)\>\"",
+           ",", "\"\<\>\"", ",", " ", 
+          RowBox[{
+           RowBox[{"1", "/", 
+            RowBox[{"(", 
+             RowBox[{"n", "-", "2"}], ")"}]}], "*", "ssd02"}], ",", 
+          "\"\<\>\""}], "}"}]}], "\[IndentingNewLine]", "}"}], ",", " ", 
+      RowBox[{"Dividers", " ", "\[Rule]", " ", 
+       RowBox[{"{", 
+        RowBox[{"None", ",", " ", "All"}], "}"}]}]}], "]"}], "]"}], ",", 
+   "10"}], "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]], "Input"]
 }, Closed]]
 }, Open  ]]
 },
@@ -208,3 +391,4 @@ StyleDefinitions->Notebook[{
   "8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, 2010)", 
   StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
 ]
+
