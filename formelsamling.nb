@@ -32,18 +32,18 @@ benytte contexts i ",
   3.539422262961896*^9, 3.5394222962230597`*^9}}],
 
 Cell[BoxData[
- RowBox[{"Begin", "[", "\"\<Global`Example`\>\"", "]"}]], "Input",
- Evaluatable->False,
- CellChangeTimes->{3.539422362986889*^9}],
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<Global`Example`\>\"", "]"}], ";"}]], "Input",
+ Evaluatable->False],
 
 Cell["og afslutter den med", "Text",
  CellChangeTimes->{{3.539422332835046*^9, 3.539422342249148*^9}, 
    3.539422392817273*^9}],
 
 Cell[BoxData[
- RowBox[{"End", "[", "]"}]], "Input",
- Evaluatable->False,
- CellChangeTimes->{{3.5394223448792057`*^9, 3.539422346792836*^9}}],
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]], "Input",
+ Evaluatable->False],
 
 Cell["\<\
 er de brugte funktioner og variable lokale for contexten. Hvis man senere \
@@ -184,6 +184,1094 @@ Cell[BoxData[{
       RowBox[{"f1", ",", "f2"}], "]"}], ",", "x"}], "]"}]}], ";"}]}], "Input",
  
  CellChangeTimes->{{3.5394198384931707`*^9, 3.539419838495109*^9}}]
+}, Closed]]
+}, Closed]],
+
+Cell["En pr\[OSlash]ve", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["To pr\[OSlash]ver", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Eksempel 2.5", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<Global`Example`\>\"", "]"}], ";"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"data", " ", "=", " ", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "3", ",", "5", ",", "5", ",", "7", ",", "9", ",", "9", ",", "10", ",", 
+        "12", ",", "20", ",", "24", ",", "24", ",", "34", ",", "43", ",", 
+        "46", ",", "58", ",", "140"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+       "2", ",", "5", ",", "5", ",", "7", ",", "8", ",", "9", ",", "14", ",", 
+        "18", ",", "24", ",", "26", ",", "26", ",", "34", ",", "37", ",", 
+        "42", ",", "90"}], "}"}]}], "\[IndentingNewLine]", "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"data", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Log", "[", "data", "]"}], " ", "//", " ", "N"}]}], 
+  ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"SData", " ", "=", " ", 
+  RowBox[{"Total", " ", "/@", " ", "data"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"USSData", " ", "=", " ", 
+  RowBox[{"Total", " ", "/@", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "^", "2"}], " ", "&"}], " ", "/@", " ", "data"}], 
+    ")"}]}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"nData", " ", "=", " ", 
+  RowBox[{"Length", " ", "/@", " ", "data"}]}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"S", " ", "=", " ", "SData"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"USS", " ", "=", " ", "USSData"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", "nData"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"f", " ", "=", " ", 
+  RowBox[{"n", " ", "-", "1"}]}]}], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["s", "2"], "=", 
+    FractionBox["1", 
+     RowBox[{"n", "-", "1"}]]}], TraditionalForm]]],
+ "(USS - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["S", "2"], "n"], TraditionalForm]]],
+ ")\t\t\t\t\t\t\t\t\t\t(3.26 p\[ARing] s. 64)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"s2", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{"(", 
+     RowBox[{"n", " ", "-", " ", "1"}], ")"}]}], " ", "*", " ", 
+   RowBox[{"(", 
+    RowBox[{"USS", " ", "-", " ", 
+     RowBox[{
+      RowBox[{"S", "^", "2"}], "/", "n"}]}], ")"}]}]}]], "Input"],
+
+Cell[TextData[StyleBox["Vi skal nu vurdere, om de 2 pr\[OSlash]ver har ens \
+varians:",
+ FontWeight->"Bold"]], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["H", 
+     RowBox[{"0", 
+      SuperscriptBox["\[Sigma]", "2"]}]], ":", 
+    SuperscriptBox[
+     SubscriptBox["\[Sigma]", "1"], "2"]}], "=", 
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["\[Sigma]", "2"], "2"], "=", 
+    SuperscriptBox["\[Sigma]", "2"]}]}], TraditionalForm]], "Input",
+ Evaluatable->False],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"F", "=", 
+    FractionBox[
+     SuperscriptBox[
+      SubscriptBox["s", "numerator"], "2"], 
+     SuperscriptBox[
+      SubscriptBox["s", "denominator"], "2"]]}], TraditionalForm]]],
+ ", hvor ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", "numerator"], "2"], "=", " ", 
+    RowBox[{"max", 
+     RowBox[{"{", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["s", 
+         RowBox[{"(", "1", ")"}]], "2"], ",", " ", 
+       SuperscriptBox[
+        SubscriptBox["s", 
+         RowBox[{"(", "2", ")"}]], "2"]}], "}"}]}]}], TraditionalForm]]],
+ " og ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", "denominator"], "2"], "=", " ", 
+    RowBox[{"min", 
+     RowBox[{"{", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["s", 
+         RowBox[{"(", "1", ")"}]], "2"], ",", " ", 
+       SuperscriptBox[
+        SubscriptBox["s", 
+         RowBox[{"(", "2", ")"}]], "2"]}], "}"}]}]}], TraditionalForm]]],
+ "\t(s. 94)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"s2num", ",", " ", "fnum"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"s2denom", ",", " ", "fdenom"}], "}"}]}], "}"}], " ", "=", " ", 
+  RowBox[{"Sort", "[", 
+   RowBox[{
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"s2", ",", " ", "f"}], "}"}], "]"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#1", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], " ", ">", " ", 
+      RowBox[{"#2", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "&"}]}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Sort", " ", "by", " ", "first", " ", "element", " ", "and", " ", "apply", 
+    " ", "on", " ", "rhs", " ", "pattern"}], " ", "*)"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Fx", "=", " ", 
+  RowBox[{"s2num", "/", "s2denom"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "obs"], "=", 
+    RowBox[{"2", 
+     RowBox[{"(", 
+      RowBox[{"1", " ", "-", " ", 
+       RowBox[{
+        SubscriptBox["F", 
+         RowBox[{"F", "(", 
+          RowBox[{
+           SubscriptBox["f", "numerator"], ",", " ", 
+           SubscriptBox["f", "denominator"]}], ")"}]], "(", "F", ")"}]}], 
+      ")"}]}]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t(s. 94 (horribel notation, men s\[ARing]dan ser det ud i \
+bogen))"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"pobs", " ", "=", " ", 
+  RowBox[{"2", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     RowBox[{"F", "[", 
+      RowBox[{"fnum", ",", " ", "fdenom", ",", "Fx"}], "]"}]}], 
+    ")"}]}]}]], "Input"],
+
+Cell[TextData[{
+ "Signifikans-sandsynligheden er st\[OSlash]rre end 0.05, s\[ARing] \
+testsandsynligheden forkaster \nikke ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["H", 
+    RowBox[{"0", 
+     SuperscriptBox["\[Sigma]", "2"]}]], TraditionalForm]]],
+ "og man reducerer derfor modellen til"
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["M", "1"], ":", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["X", "ij"], "~", "N"}], 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Mu]", "i"], ",", " ", 
+       SuperscriptBox["\[Sigma]", "2"]}], ")"}]}]}], ",", " ", 
+   RowBox[{"j", " ", "=", " ", "1"}], ",", " ", "...", ",", " ", 
+   SubscriptBox["n", "i"], ",", "  ", 
+   RowBox[{"i", " ", "=", " ", "1"}], ",", "2"}], TraditionalForm]], "Input",
+ Evaluatable->False],
+
+Cell[TextData[StyleBox["Vi skal nu vurdere, om de 2 pr\[OSlash]ver har ens \
+middelv\[AE]rdi:",
+ FontWeight->"Bold"]], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["H", 
+     RowBox[{"0", "\[Mu]"}]], ":"}], "\[InvisibleComma]", 
+   RowBox[{
+    SubscriptBox["\[Mu]", "1"], "=", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "="}]}], "\[InvisibleComma]", "\[Mu]"}], 
+  TraditionalForm]], "Input",
+ Evaluatable->False],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", "1"], "2"], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        SubscriptBox["f", 
+         RowBox[{"(", "1", ")"}]], 
+        SuperscriptBox[
+         SubscriptBox["s", 
+          RowBox[{"(", "1", ")"}]], "2"]}], "+", 
+       RowBox[{
+        SubscriptBox["f", 
+         RowBox[{"(", "2", ")"}]], 
+        SuperscriptBox[
+         SubscriptBox["s", 
+          RowBox[{"(", "2", ")"}]], "2"]}]}], 
+      RowBox[{
+       SubscriptBox["f", 
+        RowBox[{"(", "1", ")"}]], "+", 
+       SubscriptBox["f", 
+        RowBox[{"(", "2", ")"}]]}]], "=", 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["SSD", 
+        RowBox[{"(", "1", ")"}]], "+", 
+       SubscriptBox["SSD", 
+        RowBox[{"(", "2", ")"}]]}], 
+      RowBox[{
+       SubscriptBox["f", 
+        RowBox[{"(", "1", ")"}]], "+", 
+       SubscriptBox["f", 
+        RowBox[{"(", "2", ")"}]]}]]}]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t(s. 94)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"s12", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Total", "[", 
+    RowBox[{"f", "*", "s2"}], "]"}], "/", 
+   RowBox[{"Total", "[", "f", "]"}]}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"xPunktStreg", " ", "=", " ", 
+  RowBox[{"Mean", " ", "/@", " ", "data"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"t", "(", "x", ")"}], "=", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["x", "_"], "1."], "-", " ", 
+      SubscriptBox[
+       OverscriptBox["x", "_"], "2."]}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["s", "1"], "2"], "(", 
+       RowBox[{
+        FractionBox["1", 
+         SubscriptBox["n", "1"]], "+", 
+        FractionBox["1", 
+         SubscriptBox["n", "2"]]}], ")"}]]]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t\t(s. 94)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"tx", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"xPunktStreg", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], " ", "-", " ", 
+     RowBox[{"xPunktStreg", "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}], ")"}], "/", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"s12", "*", 
+     RowBox[{"Total", "[", 
+      RowBox[{"1", "/", "n"}], "]"}]}], "]"}]}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["p", "obs"], "(", "x", ")"}], "=", 
+    RowBox[{"2", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{
+        SubscriptBox["F", 
+         RowBox[{"t", "(", 
+          SubscriptBox["f", "1"], ")"}]], "(", 
+        RowBox[{"\[LeftBracketingBar]", 
+         RowBox[{"t", "(", "x", ")"}], "\[RightBracketingBar]"}], ")"}]}], 
+      ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\t\t\t\t\t\t\t\t\t(s. 94)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"pobs", " ", "=", " ", 
+  RowBox[{"2", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     RowBox[{"T", "[", 
+      RowBox[{
+       RowBox[{"Total", "[", "f", "]"}], ",", " ", 
+       RowBox[{"Abs", "[", "tx", "]"}]}], "]"}]}], ")"}]}]}]], "Input"],
+
+Cell[TextData[{
+ "Signifikans-sandsynligheden er st\[OSlash]rre end 0.05, s\[ARing] \
+testsandsynligheden forkaster \nikke ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["H", 
+    RowBox[{"0", 
+     SuperscriptBox["\[Sigma]", "2"]}]], TraditionalForm]]],
+ "og man reducerer derfor modellen til"
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["M", "1"], ":", 
+    RowBox[{
+     SubscriptBox["X", "ij"], "~", 
+     RowBox[{"N", "(", 
+      RowBox[{"\[Mu]", ",", " ", 
+       SuperscriptBox["\[Sigma]", "2"]}], ")"}]}]}], ",", " ", 
+   RowBox[{"j", " ", "=", " ", "1"}], ",", " ", "...", ",", " ", 
+   SubscriptBox["n", "i"], ",", "  ", 
+   RowBox[{"i", " ", "=", " ", "1"}], ",", "2"}], TraditionalForm]], "Input",
+ Evaluatable->False],
+
+Cell[TextData[{
+ "Vi skal nu finde konfidensintervallerne ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["c", "95"], "(", "\[Mu]", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " og ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["c", "95"], "(", 
+    SuperscriptBox["\[Sigma]", "2"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["c", "95"], "(", "\[Mu]", ")"}], "=", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        OverscriptBox["x", "_"], ".", " ", 
+        RowBox[{"-", " ", 
+         SqrtBox[
+          FractionBox[
+           SuperscriptBox["s", "2"], "n"]]}]}], 
+       RowBox[{
+        SubscriptBox["t", "0.975"], "(", "f", ")"}]}], ",", " ", 
+      RowBox[{
+       RowBox[{
+        OverscriptBox["x", "_"], ".", " ", 
+        RowBox[{"+", " ", 
+         SqrtBox[
+          FractionBox[
+           SuperscriptBox["s", "2"], "n"]]}]}], 
+       RowBox[{
+        SubscriptBox["t", "0.975"], "(", "f", ")"}]}]}], "]"}]}], 
+   TraditionalForm]]],
+ "\t\t\t\t\t\t(s. 78)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]], "Input"],
+
+Cell[BoxData["data"], "Input"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Mere end to pr\[OSlash]ver", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Eksempel 3.3", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<Global`Example`\>\"", "]"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", " ", "=", " ", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "200", ",", "215", ",", "225", ",", "229", ",", "230", ",", "232", ",", 
+       "241", ",", "253", ",", "256", ",", "264", ",", "268", ",", "288", ",",
+        "288"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "163", ",", "182", ",", "188", ",", "195", ",", "202", ",", "205", ",", 
+       "212", ",", "214", ",", "215", ",", "230", ",", "235", ",", "255", ",",
+        "272"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "268", ",", "271", ",", "273", ",", "282", ",", "285", ",", "299", ",", 
+       "309", ",", "310", ",", "314", ",", "320", ",", "337", ",", "340", ",",
+        "345"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "201", ",", "216", ",", "241", ",", "257", ",", "259", ",", "267", ",", 
+       "269", ",", "282", ",", "283", ",", "291", ",", "291", ",", "312", ",",
+        "326"}], "}"}]}], "\[IndentingNewLine]", "}"}]}], ";"}]], "Input"],
+
+Cell[TextData[{
+ "Antallet af elementer i pr\[OSlash]verne ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["n", "i"], TraditionalForm]]]
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"niData", " ", "=", " ", 
+  RowBox[{"Length", " ", "/@", " ", "data"}]}]], "Input"],
+
+Cell[TextData[{
+ "Summene af elementer i pr\[OSlash]verne ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", "i"], TraditionalForm]]]
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"SiData", " ", "=", " ", 
+  RowBox[{"Total", " ", "/@", " ", "data"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["USS", "i"], TraditionalForm]]],
+ ": Uncorrected Sum of Squares pr. r\[AE]kke ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"USS", "=", 
+    RowBox[{
+     SubsuperscriptBox["\[CapitalSigma]", 
+      RowBox[{" ", 
+       RowBox[{"i", " ", "=", " ", "1"}]}], "n"], 
+     SuperscriptBox[
+      SubscriptBox["x", "i"], "2"]}]}], TraditionalForm]]],
+ " \t\t\t\t(s. 64)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"USSiData", " ", "=", " ", 
+  RowBox[{"Total", " ", "/@", " ", 
+   RowBox[{"(", 
+    RowBox[{"data", " ", "//", " ", 
+     RowBox[{
+      RowBox[{"#", "^", "2"}], " ", "&"}]}], " ", ")"}]}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox[
+     SubscriptBox["S", "i"], "2"], 
+    SubscriptBox["n", "i"]], TraditionalForm]]],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Si2nData", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"SiData", "^", "2"}], "/", "niData"}], " ", "//", " ", 
+   "N"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["SSD", 
+    RowBox[{"(", "i", ")"}]], TraditionalForm]]],
+ ": Sum of Squares of Deviations pr. r\[AE]kke SSD = USS - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["S", "2"], "n"], TraditionalForm]]],
+ " \t\t\t\t(3.25 p\[ARing] s. 64)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"SSDiData", " ", "=", " ", 
+  RowBox[{"USSiData", " ", "-", " ", "Si2nData"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    RowBox[{"(", "i", ")"}]], TraditionalForm]]],
+ ": Antallet af frihedsgrader pr. r\[AE]kke ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["f", 
+     RowBox[{"(", "i", ")"}]], "=", 
+    RowBox[{
+     SubscriptBox["n", "i"], "-", "1"}]}], TraditionalForm]]],
+ " (s. 99)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"fiData", " ", "=", " ", 
+  RowBox[{"niData", " ", "-", " ", "1"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["s", 
+     RowBox[{"(", "i", ")"}]], "2"], TraditionalForm]]],
+ ": varians-estimat pr. r\[AE]kke ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", 
+      RowBox[{"(", "i", ")"}]], "2"], "=", 
+    FractionBox[
+     SubscriptBox["SSD", 
+      RowBox[{"(", "i", ")"}]], 
+     SubscriptBox["f", 
+      RowBox[{"(", "i", ")"}]]]}], TraditionalForm]]],
+ " (s. 99)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"si2Data", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"1", "/", 
+     RowBox[{"(", 
+      RowBox[{"niData", " ", "-", " ", "1"}], ")"}]}], "*", 
+    RowBox[{"(", 
+     RowBox[{"USSiData", " ", "-", " ", 
+      RowBox[{
+       RowBox[{"SiData", "^", "2"}], "/", "niData"}]}], ")"}]}], " ", "//", 
+   " ", "N"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox[
+     OverscriptBox["x", "_"], "."], ":"}], TraditionalForm]]],
+ " Gennemsnittet af elementer pr. r\[AE]kke (s.99)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"xPunktStregiData", " ", "=", "  ", 
+  RowBox[{
+   RowBox[{"SiData", "/", "niData"}], " ", "//", " ", "N"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["s", "1"], "2"], TraditionalForm]]],
+ ": V\[AE]gtet gennemsnit af varianserne med frihedgraderne som v\[AE]gte. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", "1"], "2"], "=", 
+    FractionBox[
+     RowBox[{"\[CapitalSigma]", " ", 
+      SubscriptBox["SSD", 
+       RowBox[{"(", "i", ")"}]]}], 
+     RowBox[{"\[CapitalSigma]", " ", 
+      SubscriptBox["f", "i"]}]]}], TraditionalForm]]],
+ " \t\t(s.99 - dog med trykfejl i bogen)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"s12Data", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Total", "[", "SSDiData", "]"}], "/", 
+   RowBox[{"Total", "[", "fiData", "]"}]}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    OverscriptBox["x", "_"], ".."], TraditionalForm]]],
+ ": gennemsnittet af ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    OverscriptBox["x", "_"], "."], TraditionalForm]]],
+ ". ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox[
+     OverscriptBox["x", "_"], ".."], "=", 
+    FractionBox[
+     SubscriptBox["S", "."], 
+     SubscriptBox["n", "."]]}], TraditionalForm]]],
+ " \t\t\t\t\t\t\t\t(s. 99)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"xPunktPunktStregData", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Total", "[", "SiData", "]"}], "/", 
+    RowBox[{"Total", "[", "niData", "]"}]}], " ", "//", " ", 
+   "N"}]}]], "Input"],
+
+Cell[TextData[StyleBox["Vi skal nu vurdere, om de k pr\[OSlash]ver har ens \
+varians:",
+ FontWeight->"Bold"]], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["H", 
+     RowBox[{"0", 
+      SuperscriptBox["\[Sigma]", "2"]}]], ":", 
+    SuperscriptBox[
+     SubscriptBox["\[Sigma]", "1"], "2"]}], "=", 
+   RowBox[{"...", "=", 
+    RowBox[{
+     SuperscriptBox[
+      SubscriptBox["\[Sigma]", "k"], "2"], "=", 
+     SuperscriptBox["\[Sigma]", "2"]}]}]}], TraditionalForm]], "Input",
+ Evaluatable->False],
+
+Cell[TextData[{
+ "Likelihood ratio er ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "2"}], "ln", " ", 
+     RowBox[{"Q", "(", "x", ")"}]}], "=", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["f", "1"], "ln", " ", 
+      SuperscriptBox[
+       SubscriptBox["s", "1"], "2"]}], "-", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "k"], 
+      RowBox[{
+       SubscriptBox["f", 
+        RowBox[{"(", "i", ")"}]], "ln", " ", 
+       SuperscriptBox[
+        SubscriptBox["s", 
+         RowBox[{"(", "i", ")"}]], "2"]}]}]}]}], TraditionalForm]]],
+ " \t\t\t\t\t(s. 114)"
+}], "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"k", " ", "=", " ", 
+   RowBox[{"Length", "[", "data", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s12", " ", "=", " ", "s12Data"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fi", " ", "=", " ", "fiData"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f1", " ", "=", " ", 
+   RowBox[{"Total", "[", "fi", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"si2", " ", "=", " ", "si2Data"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"likelihood", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"f1", "*", 
+    RowBox[{"Log", "[", "s12", "]"}]}], " ", "-", " ", 
+   RowBox[{"Total", "[", 
+    RowBox[{"fi", " ", "*", " ", 
+     RowBox[{"Log", "[", "si2", "]"}]}], 
+    "]"}]}]}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[TextData[{
+ "Kvantitet ",
+ Cell[BoxData[
+  FormBox["C", TraditionalForm]]],
+ " er givet ved ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"C", "=", 
+    RowBox[{"1", "+", 
+     RowBox[{
+      FractionBox["1", 
+       RowBox[{"3", 
+        RowBox[{"(", 
+         RowBox[{"k", "-", "1"}], ")"}]}]], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          UnderoverscriptBox["\[Sum]", 
+           RowBox[{"i", "=", "1"}], "k"], 
+          FractionBox["1", 
+           SubscriptBox["f", 
+            RowBox[{"(", "i", ")"}]]]}], ")"}], "-", 
+        FractionBox["1", 
+         SubscriptBox["f", "1"]]}], ")"}]}]}]}], TraditionalForm]]],
+ " \t\t\t\t\t(s. 114)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"c", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"1", " ", "+", " ", 
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"(", 
+       RowBox[{"3", "*", 
+        RowBox[{"(", 
+         RowBox[{"k", "-", "1"}], ")"}]}], ")"}]}], "*", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Sum", "[", 
+        RowBox[{
+         RowBox[{"1", "/", "i"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", " ", "fi"}], "}"}]}], "]"}], " ", "-", " ", 
+       RowBox[{"1", "/", "f1"}]}], ")"}]}]}], " ", "//", " ", 
+   "N"}]}]], "Input"],
+
+Cell[TextData[{
+ "Test-statikken Ba (Bartlett\[CloseCurlyQuote]s test) er givet ved ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Ba", " ", "=", " ", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"-", "2"}], "ln", " ", 
+      RowBox[{"Q", "(", "x", ")"}]}], "C"]}], TraditionalForm]]],
+ "\t\t\t \t\t(s. 114)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"ba", " ", "=", " ", 
+  RowBox[{"likelihood", "/", "c"}]}]], "Input"],
+
+Cell[TextData[{
+ "Signifikans-sandsynligheden er givet ved ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "obs"], "=", 
+    RowBox[{"1", "-", 
+     RowBox[{
+      SubscriptBox["F", 
+       RowBox[{
+        SuperscriptBox["\[Chi]", "2"], "(", 
+        RowBox[{"k", "-", "1"}], ")"}]], "(", "Ba", ")"}]}]}], 
+   TraditionalForm]]],
+ ", \ns\[ARing]fremt ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["f", 
+      RowBox[{"(", "i", ")"}]], "\[GreaterEqual]", "2"}], ",", " ", 
+    RowBox[{"i", " ", "=", " ", "1"}], ",", " ", "...", ",", " ", "k"}], 
+   TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t(s. 115) "
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"pobs", " ", "=", " ", 
+  RowBox[{"1", " ", "-", " ", 
+   RowBox[{"ChiSquare", "[", 
+    RowBox[{
+     RowBox[{"k", " ", "-", " ", "1"}], ",", " ", "ba"}], "]"}]}]}]], "Input"],
+
+Cell[TextData[{
+ "Signifikans-sandsynligheden er st\[OSlash]rre end 0.05, s\[ARing] Bartlett\
+\[CloseCurlyQuote]s test forkaster \nikke ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["H", 
+    RowBox[{"0", 
+     SuperscriptBox["\[Sigma]", "2"]}]], TraditionalForm]]],
+ "og man reducerer derfor modellen til"
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["M", "1"], ":", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["X", "ij"], "~", "N"}], 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Mu]", "i"], ",", " ", 
+       SuperscriptBox["\[Sigma]", "2"]}], ")"}]}]}], ",", " ", 
+   RowBox[{"j", " ", "=", " ", "1"}], ",", " ", "...", ",", " ", 
+   SubscriptBox["n", "i"], ",", "  ", 
+   RowBox[{"i", " ", "=", " ", "1"}], ",", " ", "...", ",", " ", "k"}], 
+  TraditionalForm]], "Input",
+ Evaluatable->False],
+
+Cell[TextData[StyleBox["Vi skal nu vurdere, om de k pr\[OSlash]ver har ens \
+middelv\[AE]rdi:",
+ FontWeight->"Bold"]], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["H", 
+     RowBox[{"0", "\[Mu]"}]], ":", 
+    SubscriptBox["\[Mu]", "1"]}], "=", " ", 
+   RowBox[{"...", " ", "=", " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "k"], "=", "\[Mu]"}]}]}], 
+  TraditionalForm]], "Input",
+ Evaluatable->False],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["SSD", "2"], "=", " ", 
+    RowBox[{
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "k"], 
+      FractionBox[
+       SuperscriptBox[
+        SubscriptBox["S", "i"], "2"], 
+       SubscriptBox["n", "i"]]}], "-", 
+     FractionBox[
+      RowBox[{"S", 
+       SuperscriptBox[".", "2"]}], 
+      RowBox[{"n", "."}]]}]}], TraditionalForm]]],
+ " \t\t\t\t\t\t\t\t\t\t(s. 115)"
+}], "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ni", " ", "=", " ", "niData"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Si", " ", "=", " ", "SiData"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Si2n", " ", "=", " ", "Si2nData"}], ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"SSD2", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Total", "[", "Si2n", "]"}], " ", "-", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Total", "[", "Si", "]"}], "^", "2"}], "/", 
+    RowBox[{"Total", "[", "ni", "]"}]}]}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", "2"], "2"], "=", 
+    FractionBox[
+     SubscriptBox["SSD", "2"], 
+     RowBox[{"k", "-", "1"}]]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t\t\t(s. 115)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"s22", " ", "=", " ", 
+  RowBox[{"SSD2", "/", 
+   RowBox[{"(", 
+    RowBox[{"k", " ", "-", " ", "1"}], ")"}]}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"F", "=", 
+    FractionBox[
+     SuperscriptBox[
+      SubscriptBox["s", "1"], "2"], 
+     SuperscriptBox[
+      SubscriptBox["s", "2"], "2"]]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t\t\t\t(s. 115)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Fx", " ", "=", " ", 
+  RowBox[{"s22", "/", "s12"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["p", "obs"], "(", "x", ")"}], "=", 
+    RowBox[{"1", "-", 
+     RowBox[{
+      SubscriptBox["F", 
+       RowBox[{"F", "(", 
+        RowBox[{
+         RowBox[{"k", "-", "1"}], ",", " ", 
+         RowBox[{"n", ".", 
+          RowBox[{"-", " ", "k"}]}]}], ")"}]], "(", "F", ")"}]}]}], 
+   TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t(s. 115)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"pobs", " ", "=", " ", 
+  RowBox[{"1", " ", "-", " ", 
+   RowBox[{"F", "[", 
+    RowBox[{
+     RowBox[{"k", " ", "-", " ", "1"}], ",", " ", 
+     RowBox[{
+      RowBox[{"Total", "[", "ni", "]"}], " ", "-", " ", "k"}], ",", " ", 
+     "Fx"}], "]"}]}]}]], "Input"],
+
+Cell[TextData[{
+ "Signifikans-sandsynligheden er mindre end 0.05, s\[ARing] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["H", 
+      RowBox[{"0", "\[Mu]"}]], ":", 
+     SubscriptBox["\[Mu]", "1"]}], "=", " ", 
+    RowBox[{"...", " ", "=", " ", 
+     RowBox[{
+      SubscriptBox["\[Mu]", "k"], "=", "\[Mu]"}]}]}], TraditionalForm]],
+  Evaluatable->False],
+ " \nforkastes. Vi reducerer derfor ",
+ StyleBox["ikke ",
+  FontSlant->"Italic"],
+ "modellen til"
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["M", "1"], ":", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["X", "ij"], "~", "N"}], 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Mu]", "i"], ",", " ", "\[Sigma]"}], ")"}]}]}], ",", 
+   " ", 
+   RowBox[{"j", " ", "=", " ", "1"}], ",", " ", "...", ",", " ", 
+   SubscriptBox["n", "i"], ",", "  ", 
+   RowBox[{"i", " ", "=", " ", "1"}], ",", " ", "...", ",", " ", "k"}], 
+  TraditionalForm]], "Input",
+ Evaluatable->False],
+
+Cell[TextData[{
+ StyleBox["Konfidensinterval for varians:\n",
+  FontWeight->"Bold"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["c", "95"], "(", 
+     SuperscriptBox["\[Sigma]", "2"], ")"}], "=", 
+    RowBox[{"[", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SubscriptBox["f", "1"], 
+        SuperscriptBox[
+         SubscriptBox["s", "1"], "2"]}], 
+       RowBox[{
+        SubsuperscriptBox["\[Chi]", "0.975", "2"], "(", 
+        SubscriptBox["f", "1"], ")"}]], ",", 
+      FractionBox[
+       RowBox[{
+        SubscriptBox["f", "1"], 
+        SuperscriptBox[
+         SubscriptBox["s", "1"], "2"]}], 
+       RowBox[{
+        SubsuperscriptBox["\[Chi]", "0.025", "2"], "(", 
+        SubscriptBox["f", "1"], ")"}]]}], "]"}]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t(s. 104)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"c95var", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"f1", " ", "*", " ", "s12"}], ")"}], "/", 
+     RowBox[{"InverseChiSquare", "[", 
+      RowBox[{"f1", ",", " ", "0.975"}], "]"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"f1", " ", "*", " ", "s12"}], ")"}], "/", 
+     RowBox[{"InverseChiSquare", "[", 
+      RowBox[{"f1", ",", " ", "0.025"}], "]"}]}]}], "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]], "Input"]
 }, Closed]]
 }, Closed]],
 
@@ -369,11 +1457,12 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"End", "[", "]"}], ";"}]], "Input"]
 }, Closed]]
-}, Open  ]]
+}, Closed]]
 },
-WindowSize->{1463, 917},
-WindowMargins->{{51, Automatic}, {Automatic, 31}},
+WindowSize->{1589, 1025},
+WindowMargins->{{68, Automatic}, {Automatic, 0}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
+ShowSelection->True,
 TrackCellChangeTimes->False,
 FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
 2010)",
