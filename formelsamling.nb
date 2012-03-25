@@ -434,16 +434,14 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    SubscriptBox[
-    OverscriptBox["x", "_"], "."], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    OverscriptBox["x", "_"], "."], TraditionalForm]]],
  "= v\[AE]rdi ~~ ",
  Cell[BoxData[
   FormBox[
    RowBox[{"N", "(", 
     RowBox[{"\[Mu]", ",", " ", 
      FractionBox[
-      SuperscriptBox["\[Sigma]", "2"], "n"]}], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+      SuperscriptBox["\[Sigma]", "2"], "n"]}], ")"}], TraditionalForm]]],
  "\t\t\t\t\t\t\t\t\t(s. 78)"
 }], "Text"],
 
@@ -480,8 +478,7 @@ Cell[TextData[{
   FormBox[
    RowBox[{
     SuperscriptBox["\[Sigma]", "2"], "\[LeftArrow]", 
-    SuperscriptBox["s", "2"]}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    SuperscriptBox["s", "2"]}], TraditionalForm]]],
  " = v\[AE]rdi ~~ ",
  Cell[BoxData[
   FormBox[
@@ -490,8 +487,7 @@ Cell[TextData[{
     RowBox[{
      RowBox[{
       SuperscriptBox["\[CapitalChi]", "2"], "(", "f", ")"}], "/", "f"}]}], 
-   TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   TraditionalForm]]],
  "\t\t\t\t\t\t\t\t(s. 78)"
 }], "Text"],
 
@@ -589,8 +585,7 @@ Cell[TextData[{
   FormBox[
    RowBox[{
     RowBox[{
-     SubscriptBox["c", "95"], "(", 
-     SuperscriptBox["\[Sigma]", "2"], ")"}], "=", 
+     SubscriptBox["c", "95"], "(", "\[Sigma]", ")"}], "=", 
     RowBox[{"[", 
      RowBox[{
       SqrtBox[
@@ -1301,10 +1296,17 @@ Cell[CellGroupData[{
 
 Cell["Sommer 2011, Opgave 1", "Subsection"],
 
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<Example`\>\"", "]"}], ";"}]], "Input"],
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{"n1", " ", "=", " ", "40"}], ";", " ", 
   RowBox[{"n2", " ", "=", " ", "20"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f1", " ", "=", " ", "39"}], ";", " ", 
+  RowBox[{"f2", " ", "=", " ", "19"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"S1", " ", "=", " ", "527"}], ";", " ", 
   RowBox[{"S2", " ", "=", " ", "336"}], ";"}], "\[IndentingNewLine]", 
@@ -1322,14 +1324,12 @@ Cell[BoxData[
 Cell[TextData[{
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[Mu]", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["\[Mu]", "1"], TraditionalForm]]],
  " \[LeftArrow] ",
  Cell[BoxData[
   FormBox[
    SubscriptBox[
-    OverscriptBox["x", "_"], "1."], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    OverscriptBox["x", "_"], "1."], TraditionalForm]]],
  "= v\[AE]rdi ~~ ",
  Cell[BoxData[
   FormBox[
@@ -1339,8 +1339,7 @@ Cell[TextData[{
      FractionBox[
       SuperscriptBox[
        SubscriptBox["\[Sigma]", "1"], "2"], 
-      SubscriptBox["n", "1"]]}], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+      SubscriptBox["n", "1"]]}], ")"}], TraditionalForm]]],
  "\t\t\t\t\t\t\t\t\t(s. 94)"
 }], "Text"],
 
@@ -1352,14 +1351,12 @@ Cell[BoxData[
 Cell[TextData[{
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[Mu]", "2"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["\[Mu]", "2"], TraditionalForm]]],
  " \[LeftArrow] ",
  Cell[BoxData[
   FormBox[
    SubscriptBox[
-    OverscriptBox["x", "_"], "2."], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+    OverscriptBox["x", "_"], "2."], TraditionalForm]]],
  "= v\[AE]rdi ~~ ",
  Cell[BoxData[
   FormBox[
@@ -1369,8 +1366,7 @@ Cell[TextData[{
      FractionBox[
       SuperscriptBox[
        SubscriptBox["\[Sigma]", "2"], "2"], 
-      SubscriptBox["n", "2"]]}], ")"}], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+      SubscriptBox["n", "2"]]}], ")"}], TraditionalForm]]],
  "\t\t\t\t\t\t\t\t\t(s. 94)"
 }], "Text"],
 
@@ -1389,8 +1385,7 @@ Cell[TextData[{
  "(",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["USS", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["USS", "1"], TraditionalForm]]],
  " - ",
  Cell[BoxData[
   FormBox[
@@ -1417,6 +1412,32 @@ Cell[BoxData[
 Cell[TextData[{
  Cell[BoxData[
   FormBox[
+   SubscriptBox["\[Sigma]", "1"], TraditionalForm]]],
+ " \[LeftArrow] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["s", 
+     RowBox[{"(", "1", ")"}]], "2"], TraditionalForm]]],
+ "= v\[AE]rdi ~~ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["\[Sigma]", "1"], "2"], 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[CapitalChi]", "2"], "(", 
+      SubscriptBox["f", 
+       RowBox[{"(", "1", ")"}]], ")"}], "/", 
+     SubscriptBox["f", 
+      RowBox[{"(", "1", ")"}]]}]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t(s. 94)"
+}], "Text"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
    RowBox[{
     SuperscriptBox[
      SubscriptBox["s", 
@@ -1427,8 +1448,7 @@ Cell[TextData[{
  "(",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["USS", "2"], TraditionalForm]],
-  FormatType->"TraditionalForm"],
+   SubscriptBox["USS", "2"], TraditionalForm]]],
  " - ",
  Cell[BoxData[
   FormBox[
@@ -1450,7 +1470,476 @@ Cell[BoxData[
      RowBox[{"USS2", " ", "-", " ", 
       RowBox[{
        RowBox[{"S2", "^", "2"}], "/", "n2"}]}], ")"}]}], " ", "//", " ", 
-   "N"}]}]], "Input"]
+   "N"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Sigma]", "2"], TraditionalForm]]],
+ " \[LeftArrow] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["s", 
+     RowBox[{"(", "2", ")"}]], "2"], TraditionalForm]]],
+ "= v\[AE]rdi ~~ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["\[Sigma]", "2"], "2"], 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[CapitalChi]", "2"], "(", 
+      SubscriptBox["f", 
+       RowBox[{"(", "2", ")"}]], ")"}], "/", 
+     SubscriptBox["f", 
+      RowBox[{"(", "2", ")"}]]}]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t(s. 94)"
+}], "Text"],
+
+Cell[TextData[{
+ "Test af ens varians ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["H", "01"], ":", 
+     SuperscriptBox[
+      SubscriptBox["\[Sigma]", "1"], "2"]}], "=", 
+    SuperscriptBox[
+     SubscriptBox["\[Sigma]", "2"], "2"]}], TraditionalForm]]]
+}], "Text"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"F", "=", 
+    FractionBox[
+     SuperscriptBox[
+      SubscriptBox["s", "numerator"], "2"], 
+     SuperscriptBox[
+      SubscriptBox["s", "denominator"], "2"]]}], TraditionalForm]]],
+ "~~ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"F", "(", 
+    RowBox[{
+     SubscriptBox["f", 
+      RowBox[{"numerator", ",", " "}]], 
+     SubscriptBox["f", "denominator"]}]}], TraditionalForm]]],
+ "), hvor ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", "numerator"], "2"], "=", " ", 
+    RowBox[{"max", 
+     RowBox[{"{", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["s", 
+         RowBox[{"(", "1", ")"}]], "2"], ",", " ", 
+       SuperscriptBox[
+        SubscriptBox["s", 
+         RowBox[{"(", "2", ")"}]], "2"]}], "}"}]}]}], TraditionalForm]]],
+ " og ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", "denominator"], "2"], "=", " ", 
+    RowBox[{"min", 
+     RowBox[{"{", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["s", 
+         RowBox[{"(", "1", ")"}]], "2"], ",", " ", 
+       SuperscriptBox[
+        SubscriptBox["s", 
+         RowBox[{"(", "2", ")"}]], "2"]}], "}"}]}]}], TraditionalForm]]],
+ "\t(s. 94)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"frac", "=", " ", 
+  RowBox[{"s22", "/", "s12"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "obs"], "=", 
+    RowBox[{"2", 
+     RowBox[{"(", 
+      RowBox[{"1", " ", "-", " ", 
+       RowBox[{
+        SubscriptBox["F", 
+         RowBox[{"F", "(", 
+          RowBox[{
+           SubscriptBox["f", "numerator"], ",", " ", 
+           SubscriptBox["f", "denominator"]}], ")"}]], "(", "F", ")"}]}], 
+      ")"}]}]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t(s. 94)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"pobs", " ", "=", " ", 
+  RowBox[{"2", 
+   RowBox[{"(", 
+    RowBox[{"1", " ", "-", 
+     RowBox[{"F", "[", 
+      RowBox[{"f2", ",", " ", "f1", ",", " ", "frac"}], "]"}]}], 
+    ")"}]}]}]], "Input"],
+
+Cell[TextData[{
+ "Test af ens middelv\[AE]rdi: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["H", "02"], ":", 
+     SubscriptBox["\[Mu]", "1"]}], "=", 
+    SubscriptBox["\[Mu]", "2"]}], TraditionalForm]]]
+}], "Text"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", "01"], "2"], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        SubscriptBox["f", 
+         RowBox[{"(", "1", ")"}]], 
+        SuperscriptBox[
+         SubscriptBox["s", 
+          RowBox[{"(", "1", ")"}]], "2"]}], "+", 
+       RowBox[{
+        SubscriptBox["f", 
+         RowBox[{"(", "2", ")"}]], 
+        SuperscriptBox[
+         SubscriptBox["s", 
+          RowBox[{"(", "2", ")"}]], "2"]}]}], 
+      RowBox[{
+       SubscriptBox["f", 
+        RowBox[{"(", "1", ")"}]], "+", 
+       SubscriptBox["f", 
+        RowBox[{"(", "2", ")"}]]}]], "=", 
+     FractionBox[
+      RowBox[{
+       SubscriptBox["SSD", 
+        RowBox[{"(", "1", ")"}]], "+", 
+       SubscriptBox["SSD", 
+        RowBox[{"(", "2", ")"}]]}], 
+      RowBox[{
+       SubscriptBox["f", 
+        RowBox[{"(", "1", ")"}]], "+", 
+       SubscriptBox["f", 
+        RowBox[{"(", "2", ")"}]]}]]}]}], TraditionalForm]]],
+ "~~ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[Sigma]", "2"], 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["\[CapitalChi]", "2"], "(", 
+       RowBox[{
+        SubscriptBox["f", 
+         RowBox[{"(", "1", ")"}]], "+", 
+        SubscriptBox["f", 
+         RowBox[{"(", "2", ")"}]]}], ")"}], "/", 
+      SubscriptBox["f", 
+       RowBox[{"(", "1", ")"}]]}]}], "+", 
+    SubscriptBox["f", 
+     RowBox[{"(", "2", ")"}]]}], TraditionalForm]]],
+ "\t\t\t\t\t(s. 94)"
+}], "Text"],
+
+Cell[TextData[{
+ "Bem\[AE]rk, at dette er estimatet for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Sigma]", "2"], TraditionalForm]]],
+ " under ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["H", "01"], TraditionalForm]]],
+ ". Det vil sige ens varians, men ingen antagelser om middelv\[AE]rdi. "
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"s012", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"f1", "*", "s12"}], " ", "+", " ", 
+     RowBox[{"f2", "*", "s22"}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{"f1", "+", "f2"}], ")"}]}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"t", "(", "x", ")"}], "=", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["x", "_"], "1."], "-", " ", 
+      SubscriptBox[
+       OverscriptBox["x", "_"], "2."]}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["s", "01"], "2"], "(", 
+       RowBox[{
+        FractionBox["1", 
+         SubscriptBox["n", "1"]], "+", 
+        FractionBox["1", 
+         SubscriptBox["n", "2"]]}], ")"}]]]}], TraditionalForm]]],
+ "~~ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "(", 
+    RowBox[{
+     SubscriptBox["f", "1"], "+", 
+     SubscriptBox["f", "2"]}], ")"}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t(s. 94)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"tx", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"xPunktStreg1", " ", "-", " ", "xPunktStreg2"}], ")"}], "/", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"s012", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"1", "/", "n1"}], "+", 
+       RowBox[{"1", "/", "n2"}]}], ")"}]}], "]"}]}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["p", "obs"], "(", "x", ")"}], "=", 
+    RowBox[{"2", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{
+        SubscriptBox["F", 
+         RowBox[{"t", "(", 
+          SubscriptBox["f", "1"], ")"}]], "(", 
+        RowBox[{"\[LeftBracketingBar]", 
+         RowBox[{"t", "(", "x", ")"}], "\[RightBracketingBar]"}], ")"}]}], 
+      ")"}]}]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t\t(s. 94)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"pobs", " ", "=", " ", 
+  RowBox[{"2", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     RowBox[{"T", "[", 
+      RowBox[{
+       RowBox[{"f1", "+", "f2"}], ",", " ", 
+       RowBox[{"Abs", "[", "tx", "]"}]}], "]"}]}], ")"}]}]}]], "Input"],
+
+Cell["\<\
+Estimat af middelv\[AE]rdi og varians samt konfidensintervaller bliver p\
+\[ARing] nuv\[AE]rende tidspunkt produceret ved at opfatte de to \
+observationsr\[AE]kker som \[EAcute]n observationsr\[AE]kke. Det vil sige, at \
+b\[ARing]de middelv\[AE]rdi- og varians-estimatet \[AE]ndrer sig.\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"xPunktStregStreg", " ", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"1", "/", 
+     RowBox[{"(", 
+      RowBox[{"n1", "+", "n2"}], ")"}]}], "*", 
+    RowBox[{"(", 
+     RowBox[{"S1", "+", "S2"}], ")"}]}], " ", "//", " ", "N"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["\[Mu]", TraditionalForm]]],
+ " \[LeftArrow] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    OverscriptBox["x", "_"], ".."], TraditionalForm]]],
+ "= v\[AE]rdi ~~ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"N", "(", 
+    RowBox[{"\[Mu]", ",", " ", 
+     FractionBox[
+      SuperscriptBox["\[Sigma]", "2"], 
+      RowBox[{
+       SubscriptBox["n", "1"], "+", 
+       SubscriptBox["n", "2"]}]]}], ")"}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t(s. 78)"
+}], "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", 
+   RowBox[{"n1", " ", "+", " ", "n2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"USS", " ", "=", " ", 
+   RowBox[{"USS1", " ", "+", " ", "USS2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"S", " ", "=", " ", 
+   RowBox[{"S1", "+", "S2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", " ", "=", " ", 
+   RowBox[{"n", " ", "-", " ", "1"}]}], ";"}]}], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["s", "02"], "2"], "=", 
+    FractionBox["1", 
+     RowBox[{"n", "-", "1"}]]}], TraditionalForm]]],
+ "(USS - ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["S", "2"], "n"], TraditionalForm]]],
+ ")\t\t\t\t\t\t\t\t\t\t\t(3.26 p\[ARing] s. 64)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"s022", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"1", "/", 
+     RowBox[{"(", 
+      RowBox[{"n", "-", "1"}], ")"}]}], "*", 
+    RowBox[{"(", 
+     RowBox[{"USS", " ", "-", " ", 
+      RowBox[{
+       RowBox[{"S", "^", "2"}], "/", "n"}]}], ")"}]}], " ", "//", " ", 
+   "N"}]}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[Sigma]", "2"], "\[LeftArrow]", 
+    SuperscriptBox[
+     SubscriptBox["s", "02"], "2"]}], TraditionalForm]]],
+ " = v\[AE]rdi ~~ ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[Sigma]", "2"], 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[CapitalChi]", "2"], "(", "f", ")"}], "/", "f"}]}], 
+   TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t(s. 78)"
+}], "Text"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["c", "95"], "(", "\[Mu]", ")"}], "=", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox[
+        OverscriptBox["x", "_"], ".."], " ", "-", " ", 
+       RowBox[{
+        SqrtBox[
+         FractionBox[
+          SuperscriptBox[
+           SubscriptBox["s", "02"], "2"], "n"]], 
+        RowBox[{
+         SubscriptBox["t", "0.975"], "(", "f", ")"}]}]}], ",", " ", 
+      RowBox[{
+       SubscriptBox[
+        OverscriptBox["x", "_"], ".."], " ", "+", " ", 
+       RowBox[{
+        SqrtBox[
+         FractionBox[
+          SuperscriptBox[
+           SubscriptBox["s", "02"], "2"], "n"]], 
+        RowBox[{
+         SubscriptBox["t", "0.975"], "(", "f", ")"}]}]}]}], "]"}]}], 
+   TraditionalForm]]],
+ "\t\t\t\t\t\t\t(s. 78)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"xPunktStregStreg", " ", "-", " ", 
+    RowBox[{
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"s022", "/", "n"}], "]"}], 
+     RowBox[{"InverseT", "[", 
+      RowBox[{"f", ",", " ", "0.975"}], "]"}]}]}], ",", " ", 
+   RowBox[{"xPunktStregStreg", " ", "+", " ", 
+    RowBox[{
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"s022", "/", "n"}], "]"}], 
+     RowBox[{"InverseT", "[", 
+      RowBox[{"f", ",", " ", "0.975"}], "]"}]}]}]}], "}"}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["c", "95"], "(", 
+     SuperscriptBox["\[Sigma]", "2"], ")"}], "=", 
+    RowBox[{"[", 
+     RowBox[{
+      FractionBox[
+       SuperscriptBox[
+        SubscriptBox["fs", "02"], "2"], 
+       RowBox[{
+        SubsuperscriptBox["\[Chi]", "0.975", "2"], "(", "f", ")"}]], ",", 
+      FractionBox[
+       SuperscriptBox[
+        SubscriptBox["fs", "02"], "2"], 
+       RowBox[{
+        SubsuperscriptBox["\[Chi]", "0.025", "2"], "(", "f", ")"}]]}], 
+     "]"}]}], TraditionalForm]]],
+ "\t\t\t\t\t\t\t\t\t(s. 79)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"f", "*", " ", 
+    RowBox[{"s022", "/", 
+     RowBox[{"InverseChiSquare", "[", 
+      RowBox[{"f", ",", " ", "0.975"}], "]"}]}]}], ",", " ", 
+   RowBox[{"f", "*", " ", 
+    RowBox[{"s022", "/", 
+     RowBox[{"InverseChiSquare", "[", 
+      RowBox[{"f", ",", " ", "0.025"}], "]"}]}]}]}], "}"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]], "Input"]
 }, Closed]]
 }, Closed]],
 
@@ -2132,9 +2621,7 @@ Cell[BoxData[
  FormBox[
   RowBox[{
    RowBox[{
-    SubscriptBox["H", 
-     RowBox[{"0", 
-      SuperscriptBox["\[Sigma]", "2"]}]], ":", 
+    SubscriptBox["H", "01"], ":", 
     SuperscriptBox[
      SubscriptBox["\[Sigma]", "1"], "2"]}], "=", 
    RowBox[{"...", "=", 
@@ -2304,9 +2791,7 @@ Cell[TextData[{
 \[CloseCurlyQuote]s test forkaster \nikke ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["H", 
-    RowBox[{"0", 
-     SuperscriptBox["\[Sigma]", "2"]}]], TraditionalForm]]],
+   SubscriptBox["H", "01"], TraditionalForm]]],
  "og man reducerer derfor modellen til"
 }], "Text"],
 
@@ -2337,8 +2822,7 @@ Cell[BoxData[
  FormBox[
   RowBox[{
    RowBox[{
-    SubscriptBox["H", 
-     RowBox[{"1", "\[Mu]"}]], ":", 
+    SubscriptBox["H", "02"], ":", 
     SubscriptBox["\[Mu]", "1"]}], "=", " ", 
    RowBox[{"...", " ", "=", " ", 
     RowBox[{
@@ -2462,8 +2946,7 @@ Cell[TextData[{
   FormBox[
    RowBox[{
     RowBox[{
-     SubscriptBox["H", 
-      RowBox[{"1", "\[Mu]"}]], ":", 
+     SubscriptBox["H", "02"], ":", 
      SubscriptBox["\[Mu]", "1"]}], "=", " ", 
     RowBox[{"...", " ", "=", " ", 
      RowBox[{
@@ -2637,6 +3120,156 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell["Line\[AE]r regression", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Estimater og konfidensintervaller", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<Example`\>\"", "]"}], ";"}]], "Input"],
+
+Cell[TextData[{
+ "SAS udskriftens v\[AE]rdier er annoteret p\[ARing] s. 145. \
+Konfidensintervallerne er defineret p\[ARing] s. 155-156\n\nFor variansen har \
+vi ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["c", "95"], "(", 
+     SuperscriptBox["\[Sigma]", "2"], ")"}], "=", 
+    RowBox[{"[", 
+     RowBox[{
+      FractionBox[
+       SuperscriptBox[
+        SubscriptBox["s", "02"], "2"], 
+       RowBox[{
+        RowBox[{
+         SubsuperscriptBox["\[CapitalChi]", "0.975", "2"], "(", 
+         SubscriptBox["f", "02"], ")"}], "/", 
+        SubscriptBox["f", "02"]}]], ",", 
+      FractionBox[
+       SuperscriptBox[
+        SubscriptBox["s", "02"], "2"], 
+       RowBox[{
+        RowBox[{
+         SubsuperscriptBox["\[CapitalChi]", "0.025", "2"], "(", 
+         SubscriptBox["f", "02"], ")"}], "/", 
+        SubscriptBox["f", "02"]}]]}], "]"}]}], TraditionalForm]]],
+ "\t\t\t\t\t(s. 156)"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"confVarReg", "[", 
+   RowBox[{"f_", ",", " ", "s022_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"s022", "/", 
+     RowBox[{"InverseChiSquareSlash", "[", 
+      RowBox[{"f", ",", " ", "0.975"}], "]"}]}], ",", " ", 
+    RowBox[{"s022", "/", 
+     RowBox[{"InverseChiSquareSlash", "[", 
+      RowBox[{"f", ",", " ", "0.025"}], "]"}]}]}], "}"}]}]], "Input"],
+
+Cell[TextData[{
+ "Eksempel (for\[ARing]r 2011 opg. 2, 1):\n\nEstimat: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[Sigma]", "2"], "\[LeftArrow]", 
+     SuperscriptBox[
+      SubscriptBox["s", "02"], "2"]}], "=", 
+    RowBox[{"0.4609497", "~~", 
+     RowBox[{
+      SuperscriptBox["\[Sigma]", "2"], 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["\[CapitalChi]", "2"], "(", "12", ")"}], "/", 
+       "12"}]}]}]}], TraditionalForm]]],
+ "\n\nKonfidensinterval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["c", "95"], "(", 
+    SuperscriptBox["\[Sigma]", "2"], ")"}], TraditionalForm]]],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"confVarReg", "[", 
+  RowBox[{"12", ",", " ", "0.4609497"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "For \[Alpha] (intercept) og \[Beta] (slope). Fra s. 145 har vi ",
+ StyleBox["Estimate \[PlusMinus] Standard Error \[Times] ",
+  FontFamily->"Courier"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", "0.975"], "(", "f", ")"}], TraditionalForm]],
+  FontFamily->"Courier"],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"confLinearRegSas", "[", 
+   RowBox[{
+   "degreesOfFreedom_", " ", ",", " ", "estimate_", ",", " ", 
+    "standardError_"}], "]"}], " ", ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"estimate", " ", "-", " ", 
+     RowBox[{"standardError", "*", 
+      RowBox[{"InverseT", "[", 
+       RowBox[{"degreesOfFreedom", ",", " ", "0.975"}], "]"}]}]}], ",", 
+    RowBox[{"estimate", " ", "+", " ", 
+     RowBox[{"standardError", "*", 
+      RowBox[{"InverseT", "[", 
+       RowBox[{"degreesOfFreedom", ",", " ", "0.975"}], "]"}]}]}]}], "}"}], 
+  " "}]], "Input"],
+
+Cell[TextData[{
+ "Eksempel (for\[ARing]r 2011 opg 2, 2):\n\nEstimater: \
+\[Alpha]\[LeftArrow]-662.4802684, \[Beta]\[LeftArrow]0.3400180\n\n",
+ "Konfidensinterval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["c", "95"], "(", "\[Alpha]", ")"}], TraditionalForm]]],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"confLinearRegSas", "[", 
+  RowBox[{"12", ",", " ", 
+   RowBox[{"-", "662.4802684"}], ",", " ", "31.28861710"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Konfidensinterval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["c", "95"], "(", "\[Beta]", ")"}], TraditionalForm]]],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"confLinearRegSas", "[", 
+  RowBox[{"12", ",", " ", "0.3400180", ",", " ", "0.01573000"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Diverse", "Subsubsection"],
 
 Cell[BoxData[
  RowBox[{
@@ -2814,12 +3447,15 @@ Cell[BoxData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"End", "[", "]"}], ";"}]], "Input"]
+  RowBox[{"End", "[", "]"}], ";"}]], "Input"],
+
+Cell[BoxData[""], "Input"]
+}, Closed]]
 }, Closed]]
 }, Closed]]
 },
 WindowSize->{937, 985},
-WindowMargins->{{Automatic, 292}, {Automatic, 41}},
+WindowMargins->{{199, Automatic}, {Automatic, 23}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 ShowSelection->True,
 TrackCellChangeTimes->False,
